@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:id="@+id/constraintLayout2"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="@color/purple">
+
+    <androidx.cardview.widget.CardView
+            style="@style/card"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".85">
+
+        <ScrollView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    style="subBackgroundStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:padding="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profileImage"
+                        style="@style/logoImageStyle"
+                        android:src="@drawable/avatar_placeholder"
+                        app:civ_border_color="#693f"
+                        app:civ_border_width="3dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+
+                <EditText
+                        android:id="@+id/emailSignUp"
+                        style="@style/InputTextField"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginEnd="16dp"
+                        android:hint="@string/email"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profileImage"/>
+
+                <EditText
+                        android:id="@+id/passwordSignUp"
+                        style="@style/InputTextField"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="@string/pass"
+                        android:inputType="textPassword"
+                        app:layout_constraintEnd_toEndOf="@+id/emailSignUp"
+                        app:layout_constraintStart_toStartOf="@+id/emailSignUp"
+                        app:layout_constraintTop_toBottomOf="@+id/emailSignUp"/>
+
+
+                <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                        android:id="@+id/signUp"
+                        style="@style/primary_btn_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="76dp"
+                        android:elevation="5dp"
+                        android:background="@color/purple"
+                        android:text="@string/signUp"
+
+                        app:layout_constraintEnd_toEndOf="@+id/passwordSignUp"
+                        app:layout_constraintStart_toStartOf="@+id/passwordSignUp"
+                        app:layout_constraintTop_toBottomOf="@+id/passwordSignUp"
+                        app:spinning_bar_color="@color/white"
+                        app:spinning_bar_padding="4dp"
+                        app:spinning_bar_width="4dp" app:layout_constraintHorizontal_bias="1.0"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

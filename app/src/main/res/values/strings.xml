@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Sorsor Chat</string>
+    <string name="username">username</string>
+    <string name="pass">password</string>
+    <string name="rememeber_me">Rememeber me</string>
+    <string name="or">OR</string>
+    <string name="create_account">create Account</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="signUp">Sign up</string>
+</resources>
